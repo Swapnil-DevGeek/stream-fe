@@ -11,7 +11,7 @@ export default function Chatbot() {
         setResponse(""); // Clear the previous response
         setIsTyping(true); // Show typing indicator
 
-        const responseStream = await fetch("http://127.0.0.1:8000/stream");
+        const responseStream = await fetch("https://fastapi-stream-be.onrender.com/stream");
         const reader = responseStream.body.getReader();
         const decoder = new TextDecoder("utf-8");
 
